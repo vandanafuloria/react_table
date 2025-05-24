@@ -6,16 +6,26 @@ export default function Table({ generateTable }) {
       className="main"
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
+        alignContent: "flex-start",
+        fontFamily: "monospace",
+        fontSize: "1.2rem",
         gap: "2rem",
         flexWrap: "wrap",
       }}
     >
       {table.map((number) => {
         return (
-          <div>
+          <div
+            style={{
+              backgroundColor: "palegreen",
+              padding: "1rem",
+              textAlign: "center",
+              alignSelf: "center",
+            }}
+          >
             {number.map((el) => (
-              <h1>{el}</h1>
+              <h4>{el}</h4>
             ))}
           </div>
         );
