@@ -1,0 +1,19 @@
+body{
+    background-color: lavender;
+}
+input, button{
+    font-size: 1rem;
+    padding:2px;
+    outline: none;
+    margin:5px;
+}
+button{
+    background-color: lavender;
+    border: 1px solid purple;
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(112, 40, 112);
+    color:lavender;
+}

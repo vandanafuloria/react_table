@@ -7,34 +7,45 @@ function App() {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(0);
 
-  function generateTable() {
-    const res = [];
+  const [tables, setTables] = useState([]);
 
-    for (let i = start; i <= end; i++) {
-      const table = [];
-      for (let j = 1; j <= 10; j++) {
-        const multiple = i * j;
-        table.push(`${i} x  ${j} =  ${multiple}`);
-      }
-      res.push(table);
-    }
-    return res;
-  }
+  const handleGenerateTable = () => {
+    const tables_ = [];
+    for (let i = start; i <= end; i++) tables_.push(i);
+
+    setTables(tables_);
+  };
+
+  console.log(tables);
 
   return (
     <div>
       <input
-        type="text"
+        type="number"
         placeholder="Enter start"
         onChange={(e) => setStart(e.target.value)}
       />
       <input
-        type="text"
+        type="number"
         placeholder="Enter end"
         onChange={(e) => setEnd(e.target.value)}
       />
-      <button onClick={generateTable}>Generate Table</button>
-      <Table generateTable={generateTable} />
+      <button onClick={handleGenerateTable}>Generate Table</button>
+      <div
+        className="body"
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          gap: "2rem",
+          flexWrap: "wrap",
+          backgroundColor: "lavender",
+          padding: "2rem",
+        }}
+      >
+        {tables.map((n) => (
+          <Table num={n} />
+        ))}
+      </div>
     </div>
   );
 }

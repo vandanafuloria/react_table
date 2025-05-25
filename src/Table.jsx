@@ -1,35 +1,26 @@
-export default function Table({ generateTable }) {
-  const table = generateTable();
-
+export default function Table({ num }) {
   return (
     <div
-      className="main"
       style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignContent: "flex-start",
+        border: "2px solid purple",
+        padding: "2rem",
+        borderRadius: "10px",
+        margin: 5,
         fontFamily: "monospace",
-        fontSize: "1.2rem",
-        gap: "2rem",
-        flexWrap: "wrap",
+        fontSize: "0.8rem",
+        color: "purple",
+        backgroundColor: "white",
       }}
     >
-      {table.map((number) => {
-        return (
-          <div
-            style={{
-              backgroundColor: "palegreen",
-              padding: "1rem",
-              textAlign: "center",
-              alignSelf: "center",
-            }}
-          >
-            {number.map((el) => (
-              <h4>{el}</h4>
-            ))}
-          </div>
-        );
-      })}
+      {Array(11)
+        .fill(null)
+        .map((_, index) => {
+          return (
+            <h1 key={index}>
+              {`${num} x ${index + 1} = ${num * (index + 1)}`}
+            </h1>
+          );
+        })}
     </div>
   );
 }
