@@ -1,12 +1,26 @@
-# React + Vite
+# Multiplication Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔢 React Multiplication Table Generator (Vite)
+This project is a simple and interactive multiplication table generator built using React with Vite for fast development and build performance.
 
-Currently, two official plugins are available:
+✨ Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Accepts a starting and ending number.
 
-## Expanding the ESLint configuration
+- Dynamically generates multiplication tables for the full range.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Each table displays values from 1 to 10.
+
+- Clean, responsive layout using inline styles (can be customized).
+
+- Uses React functional components and useState for state management.
+
+🚀 Tech Stack:
+
+- React
+
+- Vite (for lightning-fast dev server and build)
+
+- JavaScript (ES6+)
+
+![multiplication](./src/assets/Screenshot%202025-05-25%20at%201.14.58 PM.png)
