@@ -12,7 +12,7 @@ export default function Table({ num }) {
         backgroundColor: "white",
       }}
     >
-      {Array(11)
+      {Array(10)
         .fill(null)
         .map((_, index) => {
           return (

@@ -23,12 +23,12 @@ function App() {
       <input
         type="number"
         placeholder="Enter start"
-        onChange={(e) => setStart(e.target.value)}
+        onChange={(e) => setStart(Number(e.target.value))}
       />
       <input
         type="number"
         placeholder="Enter end"
-        onChange={(e) => setEnd(e.target.value)}
+        onChange={(e) => setEnd(Number(e.target.value))}
       />
       <button onClick={handleGenerateTable}>Generate Table</button>
       <div
